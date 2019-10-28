@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Quiz app</title>
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="favicon/apple-icon-57x57.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="60x60"
+			href="favicon/apple-icon-60x60.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="favicon/apple-icon-72x72.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="favicon/apple-icon-76x76.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="favicon/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="favicon/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="favicon/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="favicon/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="favicon/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="favicon/android-icon-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="favicon/favicon-96x96.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="favicon/favicon-16x16.png"
+		/>
+	</head>
+	<body>
+		<a id="logo" href="https://vk.com/spk_tusur" target="_blank"
+			><img src="logo.jpg" alt="Социально-правовая комиссия" width="100"
+		/></a>
+		<div id="quiz-container">
+			<h1>Проверь свои знания о ТУСУР</h1>
+			<button id="startGame">Начать</button>
+		</div>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,
+					'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			}
+			html,
+			body {
+				height: 100%;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				align-items: center;
+			}
+			h1 {
+				text-align: center;
+				margin-bottom: 1.5rem;
+			}
+			@media (max-width: 480px) {
+				h1 {
+					font-size: 1.5rem;
+				}
+			}
+			#quiz-container {
+				padding: 2rem 0;
+				width: 100%;
+				min-height: 20rem;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+			}
+			#quiz-card {
+				margin: 1rem;
+				width: calc(100% - 2rem);
+				max-width: 35rem;
+			}
+			/* Question title */
+			#quiz-card h3 {
+				margin-bottom: 1rem;
+			}
+			/* Answers label */
+			#quiz-card > div > label {
+				background: rgb(43, 24, 209);
+				border-radius: 0.25rem;
+				color: #fff;
+				display: block;
+				margin-bottom: 0.75rem;
+				padding: 0.5rem;
+				text-align: center;
+				transition: 0.15s ease;
+				box-shadow: 0 0 0.25rem #333;
+				cursor: pointer;
+			}
+			/* Answers input */
+			#quiz-card > div > label input {
+				display: none;
+			}
+			/* Answer checked */
+			label.checked {
+				background: rgb(29, 252, 0) !important;
+				color: #000 !important;
+			}
+			/* Answer hover */
+			#quiz-card > div > label:hover {
+				background: rgb(22, 1, 209);
+				box-shadow: 0 0 0.5rem #333;
+			}
+			/* Answer click */
+			#quiz-card > div > label:active {
+				box-shadow: 0 0 0rem #333;
+			}
+			/* Answer btn */
+			#quiz-container button {
+				background: rgb(0, 32, 212);
+				border-radius: 0.5rem;
+				border: none;
+				box-shadow: 0 0 0.25rem #333;
+				color: #fff;
+				cursor: pointer;
+				display: block;
+				font-weight: bold;
+				margin: 0 auto;
+				padding: 0.5rem 2rem;
+			}
+		</style>
+		<!-- VK Share -->
+		<script
+			type="text/javascript"
+			src="https://vk.com/js/api/share.js?93"
+			charset="utf-8"
+		></script>
+		<!-- QuizJS -->
+		<script src="quiz.js"></script>
+		<!--  -->
+		<script>
+			const testData = [
+				{
+					question: 'В каком году был основан ТУСУР?',
+					answers: [
+						{ answer: 1972, score: 0.5 },
+						{ answer: 1978, score: 0 },
+						{ answer: 1962, score: 0.5 },
+						{ answer: 1970, score: 0.5 }
+					]
+				},
+				{
+					question: 'Сколько всего факультетов в ТУСУРе?',
+					answers: [
+						{ answer: 10, score: 1 },
+						{ answer: 11, score: 0 },
+						{ answer: 13, score: 0 },
+						{ answer: 9, score: 0 }
+					]
+				},
+				{
+					question:
+						'В каком кабинете главного корпуса находится Профком студентов?',
+					answers: [
+						{ answer: 236, score: 1 },
+						{ answer: 102, score: 0 },
+						{ answer: 235, score: 0 },
+						{ answer: 113, score: 0 }
+					]
+				},
+				{
+					question: 'В состав какого университета изначально входил ТУСУР?',
+					answers: [
+						{ answer: 'ТГУ', score: 0 },
+						{ answer: 'ТПУ', score: 1 },
+						{ answer: 'ТГПУ', score: 0 },
+						{ answer: 'ТГАСУ', score: 0 }
+					]
+				}
+			];
+			document.getElementById('startGame').onclick = () =>
+				new Quiz(
+					testData,
+					{
+						container: 'quiz-container', // Default container id='quiz-container'
+						length: 4, // Default is 10 if Data.length > 10 else Data.length
+						shuffle: true, // Shuffle is disabled default
+						tryAgain: true // Try again button is enabled default
+					},
+					{ nextBtn: 'Дальше', endBtn: 'Завершить' }
+				);
+		</script>
+	</body>
+</html>
