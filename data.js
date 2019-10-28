@@ -12,7 +12,7 @@ const QuestionsDB = [
 		question: 'Кто явлеяется действующим ректором ТУСУРа?',
 		answers: [
 			{ answer: 'Шелупанов', score: 0 },
-			{ answer: 'Рулевский', score: 0 },
+			{ answer: 'Рулевский', score: 1 },
 			{ answer: 'Шурыгин', score: 0 }
 		]
 	},
