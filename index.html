@@ -181,53 +181,16 @@
 		></script>
 		<!-- QuizJS -->
 		<script src="quiz.js"></script>
-		<!--  -->
+		<!-- Initialize Quiz -->
+		<script src="data.js"></script>
 		<script>
-			const testData = [
-				{
-					question: 'В каком году был основан ТУСУР?',
-					answers: [
-						{ answer: 1972, score: 0.5 },
-						{ answer: 1978, score: 0 },
-						{ answer: 1962, score: 0.5 },
-						{ answer: 1970, score: 0.5 }
-					]
-				},
-				{
-					question: 'Сколько всего факультетов в ТУСУРе?',
-					answers: [
-						{ answer: 10, score: 1 },
-						{ answer: 11, score: 0 },
-						{ answer: 13, score: 0 },
-						{ answer: 9, score: 0 }
-					]
-				},
-				{
-					question:
-						'В каком кабинете главного корпуса находится Профком студентов?',
-					answers: [
-						{ answer: 236, score: 1 },
-						{ answer: 102, score: 0 },
-						{ answer: 235, score: 0 },
-						{ answer: 113, score: 0 }
-					]
-				},
-				{
-					question: 'В состав какого университета изначально входил ТУСУР?',
-					answers: [
-						{ answer: 'ТГУ', score: 0 },
-						{ answer: 'ТПУ', score: 1 },
-						{ answer: 'ТГПУ', score: 0 },
-						{ answer: 'ТГАСУ', score: 0 }
-					]
-				}
-			];
-			document.getElementById('startGame').onclick = () =>
+			const startBtn = document.getElementById('startGame');
+			startBtn.onclick = () =>
 				new Quiz(
-					testData,
+					questions,
 					{
-						container: 'quiz-container', // Default container id='quiz-container'
-						length: 4, // Default is 10 if Data.length > 10 else Data.length
+						// container: 'quiz-container', // Default container id='quiz-container'
+						length: 10, // Default is 10 if Data.length > 10 else Data.length
 						shuffle: true, // Shuffle is disabled default
 						tryAgain: true // Try again button is enabled default
 					},
