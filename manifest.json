@@ -45,5 +45,5 @@
 	"scope": "/",
 	"background_color": "#fff",
 	"theme_color": "#fff",
-	"prefer_related_applications": true
+	"prefer_related_applications": false
 }
