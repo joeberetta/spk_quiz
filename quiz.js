@@ -16,17 +16,7 @@ class Quiz {
 			...i18n
 		};
 		this.score = 0;
-		this.totalScore = this.data
-			.map(data =>
-				data.answers.reduce(
-					(accumulator, currentValue) =>
-						Number(accumulator + currentValue.score),
-					0
-				)
-			)
-			.reduce((accumulator, currentValue) =>
-				Number(accumulator + currentValue)
-			);
+		this.totalScore = this.settings.length;
 		this.init();
 	}
 	shuffle(data) {
