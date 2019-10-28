@@ -86,7 +86,7 @@ const QuestionsDB = [
 			{ answer: 1.3, score: 1 },
 			{ answer: 1.4, score: 0 },
 			{ answer: 1.7, score: 0 },
-			{ answer: 1.7, score: 0 }
+			{ answer: 1.1, score: 0 }
 		]
 	},
 	{
