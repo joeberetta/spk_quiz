@@ -137,10 +137,10 @@ const QuestionsDB = [
 	{
 		question: 'К именным стипендиям ТУСУРа относятся стипендии:',
 		answers: [
-			{ answer: 'им. Перегудова', score: 0 },
-			{ answer: 'им. Гюнтера', score: 0 },
-			{ answer: 'им. Зубарева', score: 0 },
-			{ answer: 'все ответы верны', score: 1 }
+			{ answer: 'им. Перегудова', score: 0.5 },
+			{ answer: 'им. Шелупанова', score: 0 },
+			{ answer: 'им. Зубарева', score: 0.5 },
+			{ answer: 'все ответы верны', score: 0 }
 		]
 	},
 	{
