@@ -182,13 +182,13 @@
 		<!-- QuizJS -->
 		<script src="quiz.js"></script>
 		<!-- Initialize Quiz -->
-		<script src="data.js"></script>
+		<script src="./data.js"></script>
 		<script>
 			window.onload = () => {
 				const startBtn = document.getElementById('startGame');
 				startBtn.onclick = () =>
 					new Quiz(
-						questions,
+						QuestionsDB,
 						{
 							// container: 'quiz-container', // Default container id='quiz-container'
 							// length: 10, // Default is 10 if Data.length > 10 else Data.length

@@ -1,4 +1,4 @@
-const questions = [
+const QuestionsDB = [
 	{
 		question: 'В каком году был основан ТУСУР?',
 		answers: [
