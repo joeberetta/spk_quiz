@@ -93,7 +93,6 @@ const QuestionsDB = [
 		question: 'Социальная стипендия выплачивается:',
 		answers: [
 			{ answer: 'отличникам', score: 0 },
-			{ answer: 'малоимущим', score: 0 },
 			{ answer: 'иностранным студентам', score: 0 },
 			{ answer: 'нуждающимся студентам', score: 1 }
 		]
@@ -139,8 +138,7 @@ const QuestionsDB = [
 		answers: [
 			{ answer: 'им. Перегудова', score: 0.5 },
 			{ answer: 'им. Шелупанова', score: 0 },
-			{ answer: 'им. Зубарева', score: 0.5 },
-			{ answer: 'все ответы верны', score: 0 }
+			{ answer: 'им. Зубарева', score: 0.5 }
 		]
 	},
 	{

@@ -194,17 +194,17 @@
 							// container: 'quiz-container', // Default container id='quiz-container'
 							// length: 10, // Default is 10 if Data.length > 10 else Data.length
 							shuffle: true, // Shuffle is disabled default
-							tryAgain: true // Try again button is enabled default
+							tryAgain: false // Try again button is enabled default
 						},
 						{ nextBtn: 'Дальше', endBtn: 'Завершить' }
 					);
-				let deferredPrompt;
-				window.addEventListener('beforeinstallprompt', e => {
-					// Stash the event so it can be triggered later.
-					deferredPrompt = e;
-					showInstallPromotion();
-				});
 			};
+			let deferredPrompt;
+			window.addEventListener('beforeinstallprompt', e => {
+				// Stash the event so it can be triggered later.
+				deferredPrompt = e;
+				showInstallPromotion();
+			});
 		</script>
 	</body>
 </html>

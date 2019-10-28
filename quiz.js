@@ -152,6 +152,15 @@ class Quiz {
 			? document.createElement('div')
 			: document.querySelector('#quiz-card');
 
+		const pageFromTotal = isChildNotExist
+			? document.createElement('p')
+			: child.querySelector('p');
+		pageFromTotal.style.textAlign = 'center';
+		pageFromTotal.style.marginBottom = '1rem';
+		pageFromTotal.innerHTML = `${this.currentQuestion + 1}/${
+			this.settings.length
+		}`;
+
 		const questionText = isChildNotExist
 			? document.createElement('h3')
 			: child.querySelector('h3');
@@ -165,6 +174,7 @@ class Quiz {
 
 		if (isChildNotExist) {
 			child.id = 'quiz-card';
+			child.appendChild(pageFromTotal);
 			child.appendChild(questionText);
 			child.appendChild(answersContainer);
 			parent.appendChild(child);
