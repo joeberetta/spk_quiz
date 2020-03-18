@@ -1,4 +1,5 @@
-const QuestionsDB = [
+const QuestionsDB = 
+[
 	{
 		question: 'Кто явлеяется действующим ректором ТУСУРа?',
 		answers: [
